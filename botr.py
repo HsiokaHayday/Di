@@ -71,9 +71,9 @@ except ImportError:
             print("Failed to install requests with pip and pip:", str(e))
             exit(0)
 import json
-API_ID = '22651991'
-API_HASH = 'ecad214ecff6a5cd90fc141d4e32f597'
-bot_token = "7180402544:AAFzbhsiYS9y8GFeZcnspKiZMJW5k0hLm_A"
+API_ID = '25006124'
+API_HASH = '42e5defde8d80a52fd3bafd5bce54ee4'
+bot_token = "7221097107:AAEzDlWBuH08-jcgu7nkDoDgPWBEQ_vgq9o"
 running_processes = {}
 SESSIONS_DIR = 'echo_ac'
 try:
@@ -84,7 +84,7 @@ except FileNotFoundError:
 
 if "token" not in info:
     while (True):
-        bot_token = "7180402544:AAFzbhsiYS9y8GFeZcnspKiZMJW5k0hLm_A"
+        bot_token = "7221097107:AAEzDlWBuH08-jcgu7nkDoDgPWBEQ_vgq9o"
         response = requests.request(
             "GET", f"https://api.telegram.org/bot{bot_token}/getme")
         response_json = response.json()
@@ -99,7 +99,7 @@ else:
     bot_token = info["token"]
 
 if "sudo" not in info:
-    info["sudo"] = 6225707353
+    info["sudo"] = 5639458117
     info["admins"] = {}
     with open("echo_data.json", "w") as json_file:
         json.dump(info, json_file)
